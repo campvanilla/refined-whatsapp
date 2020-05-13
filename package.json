@@ -1,0 +1,46 @@
+{
+  "name": "refined-whatsapp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx ./",
+    "start": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campvanilla/ideal-octo-chainsaw.git"
+  },
+  "author": "Abinav Seelan <abinav.n.seelan@gmail.com>, Aditi Mohanty <aditi.anomita@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/campvanilla/ideal-octo-chainsaw/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+      "eslint"
+    ]
+  },
+  "homepage": "https://github.com/campvanilla/ideal-octo-chainsaw#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "rollup": "^2.10.0",
+    "rollup-plugin-chrome-extension": "^2.2.0",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@types/chrome": "0.0.108"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "refined-whatsapp",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "https://github.com/campvanilla/ideal-octo-chainsaw",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://web.whatsapp.com"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "src/content-scripts/index.ts"
+      ]
+    }
+  ]
+}
