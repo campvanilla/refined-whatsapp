@@ -27,5 +27,9 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     'react/prop-types': 0,
   },
-  globals: {}
+  globals: {
+    __DEBUG__: true,
+    __DEV__: true,
+    __PROD__: true,
+  }
 };
