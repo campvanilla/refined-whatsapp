@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
+    "module": "esnext",
     "target": "es6",
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
     "sourceMap": true,
+    "noEmitOnError": true,
     "esModuleInterop": true,
     "lib": ["dom", "esnext"],
     "allowSyntheticDefaultImports": true,
