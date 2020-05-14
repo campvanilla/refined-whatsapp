@@ -1,9 +1,8 @@
-import { rollup } from 'rollup';
-
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import replace from '@rollup/plugin-replace';
+import babel from '@rollup/plugin-babel';
 
 import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension';
 
@@ -25,6 +24,10 @@ export default {
 
     resolve(),
     typescript(),
+    babel({
+      babelHelpers: 'bundled',
+      presets: ['@babel/preset-env']
+    }),
     commonjs(),
     replace({
       __DEBUG__: dev,

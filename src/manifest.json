@@ -1,5 +1,6 @@
 {
   "name": "refined-whatsapp",
+  "options_page": "options/index.html",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "💅 whatsapp!",

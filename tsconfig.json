@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "es6",
+    "target": "esnext",
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "skipLibCheck": true,
@@ -14,7 +14,7 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "@src/*": ["src/*"],
+      "@src/*": ["src/*"]
     },
     "types": ["chrome"]
   },
