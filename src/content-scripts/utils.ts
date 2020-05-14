@@ -4,19 +4,12 @@ export const log = (s: any) => {
   }
 }
 
-export const checkCombo = (keys, modifiers) => {
-  console.log("checkCombo -> modifiers", modifiers);
-  console.log("checkCombo -> keys", keys);
-  for (let i = 0; i < keys.length; i++) {
-    if (
-      keys[i].key === 'cmd'
-      && !(
-        modifiers.ctrlKey
-        || modifiers.metaKey
-      )
-    ) {
-      return false;
-    } else if (modifiers[keys[i].key] !== keys[i].value) {
+export const checkCombo = (keyCombo, modifiers) => {
+  const checkList = ['key', 'ctrlKey', 'metaKey', 'shiftKey'];
+
+  for (let i = 0; i < checkList.length; i++) {
+    const key = checkList[i];
+    if ((keyCombo[key] || false) !== modifiers[key]) {
       return false;
     }
   }

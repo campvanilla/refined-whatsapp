@@ -23,8 +23,8 @@ export default {
     simpleReloader(),
 
 
-    typescript(),
     resolve(),
+    typescript(),
     commonjs(),
     replace({
       __DEBUG__: dev,
