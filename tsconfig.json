@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmitHelpers": false,
     "module": "esnext",
     "target": "esnext",
     "noImplicitAny": false,
