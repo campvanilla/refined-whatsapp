@@ -38,8 +38,6 @@ const toggleSidebar = () => {
     const sideBarParent = sideBar.parentElement as HTMLDivElement;
 
     if (sideBarParent.style.maxWidth === '35%') {
-      sideBarParent.style.maxWidth = '35%';
-      sideBarParent.style.transition = 'all 0.15s ease-out';
       sideBarParent.style.maxWidth = '0%';
     } else {
       sideBarParent.style.maxWidth = '35%';
@@ -116,11 +114,12 @@ const hotKeyConfiguration = {
   },
 };
 
-const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean }) => {
+const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean }, event: KeyboardEvent) => {
   Object
     .keys(hotKeyConfiguration)
     .forEach((action) => {
       if (checkCombo(hotKeyConfiguration[action].keyCombo, keyValues)) {
+        event.preventDefault();
         hotKeyConfiguration[action].run();
       }
     })
@@ -129,8 +128,6 @@ const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean;
 
 export const handleHotKeys = (event: KeyboardEvent) => {
   // To override chrome hotkeys
-  event.preventDefault();
-
   const { metaKey, ctrlKey, key, shiftKey } = event;
 
   log({ metaKey, key, ctrlKey });
@@ -140,5 +137,5 @@ export const handleHotKeys = (event: KeyboardEvent) => {
     metaKey,
     ctrlKey,
     shiftKey,
-  });
+  }, event);
 };
