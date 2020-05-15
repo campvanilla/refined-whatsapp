@@ -9,10 +9,12 @@ export const RefinedDark = `
     --drawer-section-background: #2c2c2c;
     --incoming-background: rgb(36, 36, 36);
     --incoming-background-rgb: 67, 67, 67;
-    --incoming-background-deeper: rgb(36, 36, 36);
+    --incoming-background-deeper: #383838;
     --outgoing-background: rgb(36, 36, 36);
     --outgoing-background-rgb: 67, 67, 67;
-    --outgoing-background-deeper: rgb(36, 36, 36);
+    --outgoing-background-deeper: #383838;
+    --overlay-rgb: #383838;
+    --popup-panel-background: #383838;
     --outgoing-background-deeper-rgb: 67, 67, 67;
     --dropdown-background: rgb(36, 36, 36);
     --panel-background-deep: #434343;
