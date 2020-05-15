@@ -1,10 +1,9 @@
 export const OvernightSlumber = `
   :root {
     --app-background-stripe: #151515;
-    --panel-background-colored: #747474;
     --primary: #eee;
     --border-default: rgb(36, 36, 36);
-    --butterbar-default-background: #747474;
+    --butterbar-default-background: #00bfa5;
     --panel-background-rgb: 36, 36, 36;
     --drawer-background: rgb(36, 36, 36);
     --drawer-section-background: #2c2c2c;
@@ -52,6 +51,8 @@ export const OvernightSlumber = `
     --border-list: rgba(0, 0, 0, 0);
     --system-message-background: #434343;
     --system-message-text: #fff;
+    --dropdown-background-hover: #434343;
+    --primary-title: #eee;
   }
   body {
       color: #d1d8dd;
@@ -66,6 +67,6 @@ export const OvernightSlumber = `
   }
 
   #startup, #initial_startup {
-    background-color: rgb(36, 36, 36) !important;
+    background-color: rgb(36, 36, 36);
   }
 `.trim();
