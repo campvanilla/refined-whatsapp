@@ -128,6 +128,9 @@ const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean;
 
 
 export const handleHotKeys = (event: KeyboardEvent) => {
+  // To override chrome hotkeys
+  event.preventDefault();
+
   const { metaKey, ctrlKey, key, shiftKey } = event;
 
   log({ metaKey, key, ctrlKey });
