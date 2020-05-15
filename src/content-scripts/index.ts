@@ -19,3 +19,5 @@ const poller = setInterval(() => {
     controlList.children[0].appendChild(themeBtn);
   }
 }, 1000);
+
+setTheme(Theme.OvernightSlumber);

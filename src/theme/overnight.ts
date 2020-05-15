@@ -1,3 +1,12 @@
+/**
+ * Colors:
+ * rgb(36, 36, 36)
+ * #151515
+ * #1C2022
+ * #434343
+ * #171717
+ */
+
 export const OvernightSlumber = `
   :root {
     --gray-60: #101d25;
@@ -6,21 +15,22 @@ export const OvernightSlumber = `
     --gray-600: #cbd4d9;
     --gray-700: #cbd4d9;
     --primary: #cbd4d9;
+    --border-stronger: rgba(0, 0, 0, 0);
     --primary-rgb: 203, 212, 217;
     --border-default: #101d25;
-    --border-list: #101d25;
+    --border-list: rgba(0, 0, 0, 0);
     --border-list-rgb: 16, 29, 37;
-    --conversation-panel-background: #101d25;
-    --intro-background: #101d25;
-    --background-default: #101d25;
+    --conversation-panel-background: #151515;
+    --intro-background: #151515;
+    --background-default: rgb(36, 36, 36);
     --border-panel: #101d25;
-    --background-default-active: #1c272d;
-    --background-default-hover: #414a51;
+    --background-default-active: #171717;
+    --background-default-hover: #434343;
     --border-chatlist: #101d25;
-    --butterbar-background-default: #101d25;
-    --rich-text-panel-background: #101d25;
-    --panel-background-lighter: #101d25;
-    --panel-background: #232d36;
+    --butterbar-background-default: #151515;
+    --rich-text-panel-background: rgb(36, 36, 36);
+    --panel-background-lighter: rgb(36, 36, 36);
+    --panel-background: rgb(36, 36, 36);
     --panel-background-rgb: 35, 45, 54;
     --panel-background-hover: #232d36;
     --panel-background-hover-rgb: 35, 45, 54;
@@ -34,6 +44,7 @@ export const OvernightSlumber = `
     --secondary: #8c959a;
     --secondary-stronger:: #8c959a;
     --secondary-lighter: #8c959a;
+    --icon-lighter-rgb: #FFF;
     --icon-lighter: #8c959a;
     --icon-strong: #d1d8dd;
 
@@ -83,11 +94,16 @@ export const OvernightSlumber = `
   body {
       color: #d1d8dd;
   }
+
+  .app {
+    border-radius: 6px !important;
+  }
+
   .app-wrapper-web {
-      background-color: #101d25;
+      background-color: #1C2022;
   }
   ._347-w::after {
-      background-color: #101d25 !important;
+      background-color: #1C2022 !important;
   }
   ._2y17h {
       border-right: none;
@@ -122,6 +138,6 @@ export const OvernightSlumber = `
       color: #d1d8dd;
   }
   #startup, #initial_startup {
-      background-color: #232d36 !important;
+    background-color: rgb(36, 36, 36) !important;
   }
 `.trim();
