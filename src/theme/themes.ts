@@ -1,4 +1,4 @@
-export const OvernightSlumber = `
+export const RefinedDark = `
   :root {
     --app-background-stripe: #151515;
     --primary: #eee;

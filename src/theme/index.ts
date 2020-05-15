@@ -1,30 +1,34 @@
-import { OvernightSlumber } from './overnight';
+import { RefinedDark } from './themes';
 import { log } from '../content-scripts/utils';
 
 export enum Theme {
   'WhatsappWeb',
-  'OvernightSlumber',
+  'RefinedDark',
 }
 
 const THEMES = new Map<Theme, string>([
   [Theme.WhatsappWeb, ''],
-  [Theme.OvernightSlumber, OvernightSlumber],
+  [Theme.RefinedDark, RefinedDark],
 ]);
 
 const internalStyleOverride = document.createElement('style');
 internalStyleOverride.id = 'refined-whatsapp--internal-style';
 let appended = false;
 
-const currentTheme = Theme.WhatsappWeb;
+let currentTheme = Theme.WhatsappWeb;
 
-export const setTheme = (to: Theme) => {
+export const toggleTheme = () => {
+  const to = currentTheme === Theme.WhatsappWeb ? Theme.RefinedDark : Theme.WhatsappWeb;
   log({ setThemeTo: to });
+
   if (appended === false) {
-    appended = true;
     document.head.append(internalStyleOverride);
+    appended = true;
   }
 
-  if (to !== currentTheme && THEMES.has(to)) {
+  if (THEMES.has(to)) {
     internalStyleOverride.innerText = THEMES.get(to) as string;
+    currentTheme = to;
   }
 };
+
