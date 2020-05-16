@@ -2,6 +2,10 @@
 
 > Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀
 
+
+<img width="1400" alt="GithubBanner" src="https://user-images.githubusercontent.com/6417910/82126610-6d87e800-97cb-11ea-8201-50ced4a2de0b.png">
+
+
 ## setup
 
 If you'd like to try this extension out before a stable release:-
