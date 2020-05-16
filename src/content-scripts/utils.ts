@@ -24,7 +24,7 @@ const getOS = () => {
   let os = '';
 
   if (macosPlatforms.indexOf(platform) !== -1) {
-    os = 'Mac OS';
+    os = 'MacOS';
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os = 'Windows';
   } else if (!os && /Linux/.test(platform)) {
