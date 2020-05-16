@@ -1,24 +1,17 @@
-import { RefinedDark } from './themes';
+
 import { log } from '../content-scripts/utils';
-
-export enum Theme {
-  'WhatsappWeb',
-  'RefinedDark',
-}
-
-const THEMES = new Map<Theme, string>([
-  [Theme.WhatsappWeb, ''],
-  [Theme.RefinedDark, RefinedDark],
-]);
+import { ThemeType, ThemeStyles } from './themes'
+import { getPreferredTheme, setPreferredTheme } from '@src/storage';
 
 const internalStyleOverride = document.createElement('style');
 internalStyleOverride.id = 'refined-whatsapp--internal-style';
-let appended = false;
 
-let currentTheme = Theme.WhatsappWeb;
+// module context variables :(
+let appended = false;
+let currentTheme = ThemeType.WhatsappWeb;
 
 export const toggleTheme = () => {
-  const to = currentTheme === Theme.WhatsappWeb ? Theme.RefinedDark : Theme.WhatsappWeb;
+  const to = currentTheme === ThemeType.WhatsappWeb ? ThemeType.RefinedDark : ThemeType.WhatsappWeb;
   log({ setThemeTo: to });
 
   if (appended === false) {
@@ -26,9 +19,16 @@ export const toggleTheme = () => {
     appended = true;
   }
 
-  if (THEMES.has(to)) {
-    internalStyleOverride.innerText = THEMES.get(to) as string;
+  if (ThemeStyles.has(to)) {
+    internalStyleOverride.innerText = ThemeStyles.get(to) as string;
     currentTheme = to;
+    setPreferredTheme(to);
   }
 };
 
+export const setInitialTheme = async () => {
+  const theme = await getPreferredTheme(currentTheme);
+  if (theme !== currentTheme) {
+    toggleTheme();
+  }
+};

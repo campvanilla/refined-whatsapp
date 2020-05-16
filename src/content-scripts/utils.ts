@@ -1,6 +1,7 @@
-export const log = (s: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const log = (...args: any[]) => {
   if (__DEBUG__) {
-    console.log("[DEBUG] ", s);
+    console.log("[DEBUG] ", ...args);
   }
 }
 

@@ -6,8 +6,9 @@ module.exports = {
   ],
   env: {
     browser: true,
-    node: true,
     es6: true,
+    node: false,
+    webextensions: true,
   },
   parserOptions: {
     ecmaVersion: 2018,  // Allows for the parsing of modern ECMAScript features
