@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "eslint --ext .ts,.tsx ./",
     "start": "rollup -c rollup.config.js -w",
-    "build": "NODE_ENV=production rollup -c rollup.config.js"
+    "prebuild": "rm -rf dist",
+    "build": "NODE_ENV=production rollup -c rollup.config.js",
+    "build:zip": "npm run build && zip -r refined-whatsapp.zip dist"
   },
   "repository": {
     "type": "git",
