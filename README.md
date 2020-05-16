@@ -1,6 +1,6 @@
-# Refined Whatsapp
+# refined-whatsapp
 
-> Supercharge Whatsapp Web with hotkeys and custom themes! 🚀
+> Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀
 
 ## setup
 

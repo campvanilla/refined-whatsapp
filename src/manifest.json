@@ -1,10 +1,9 @@
 {
   "name": "refined-whatsapp",
-  "options_page": "options/index.html",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "💅 whatsapp!",
-  "homepage_url": "https://github.com/campvanilla/ideal-octo-chainsaw",
+  "description": "Supercharge Whatsapp™ Web with hotkeys and dark theme! 🚀",
+  "homepage_url": "https://github.com/campvanilla/refined-whatsapp",
   "icons": {
     "128": "icons/128x128.png"
   },
