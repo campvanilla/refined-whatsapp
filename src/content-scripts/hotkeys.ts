@@ -1,5 +1,7 @@
 import { log, checkCombo } from './utils';
 
+import { os } from './utils';
+
 const openNewChat = () => {
   log("openNewChat");
 
@@ -60,67 +62,102 @@ const toggleInfo = () => {
   }
 }
 
+const toggleSearch = () => {
+  log('toggleSearch');
+
+  const searchBtn = document.querySelector('div[title="Search…"]') as HTMLDivElement;
+
+  searchBtn.dispatchEvent(new Event('mousedown', { bubbles: true }));
+}
+
 const hotKeyConfiguration = {
-  OPEN_NEW_CHAT_WITH_CTRL: {
-    run: openNewChat,
-    keyCombo: {
-      key: 'k',
-      ctrlKey: true,
-    },
-  },
-  OPEN_NEW_CHAT_WITH_CMD: {
-    run: openNewChat,
-    keyCombo: {
+  MacOS: {
+    OPEN_NEW_CHAT: {
       key: 'k',
       metaKey: true,
     },
+    TOGGLE_VISIBILITY: {
+      key: 'l',
+      metaKey: true,
+    },
+    TOGGLE_SIDEBAR: {
+      key: '\\',
+      metaKey: true,
+    },
+    TOGGLE_INFO: {
+      key: 'i',
+      metaKey: true,
+    },
+    TOGGLE_SEARCH: {
+      key: ' ',
+      ctrlKey: true,
+    },
   },
-  TOGGLE_VISIBILITY: {
-    run: toggleCurrentChatVisibility,
-    keyCombo: {
+  Windows: {
+    OPEN_NEW_CHAT: {
+      key: 'k',
+      ctrlKey: true,
+    },
+    TOGGLE_VISIBILITY: {
       key: 'l',
       ctrlKey: true,
     },
-  },
-  TOGGLE_SIDEBAR_WITH_CTRL: {
-    run: toggleSidebar,
-    keyCombo: {
+    TOGGLE_SIDEBAR: {
       key: '\\',
-      shiftKey: true,
       ctrlKey: true,
     },
-  },
-  TOGGLE_SIDEBAR_WITH_CMD: {
-    run: toggleSidebar,
-    keyCombo: {
-      key: '\\',
-      shiftKey: true,
-      metaKey: true,
-    },
-  },
-  TOGGLE_INFO_WITH_CTRL: {
-    run: toggleInfo,
-    keyCombo: {
+    TOGGLE_INFO: {
       key: 'i',
       ctrlKey: true,
     },
-  },
-  TOGGLE_INFO_WITH_CMD: {
-    run: toggleInfo,
-    keyCombo: {
-      key: 'i',
-      metaKey: true,
+    TOGGLE_SEARCH: {
+      key: ' ',
+      ctrlKey: true,
     },
   },
+  Linux: {
+    OPEN_NEW_CHAT: {
+      key: 'k',
+      ctrlKey: true,
+    },
+    TOGGLE_VISIBILITY: {
+      key: 'l',
+      ctrlKey: true,
+    },
+    TOGGLE_SIDEBAR: {
+      key: '\\',
+      ctrlKey: true,
+    },
+    TOGGLE_INFO: {
+      key: 'i',
+      ctrlKey: true,
+    },
+    TOGGLE_SEARCH: {
+      key: ' ',
+      ctrlKey: true,
+    },
+  },
+  run: {
+    OPEN_NEW_CHAT: openNewChat,
+    TOGGLE_VISIBILITY: toggleCurrentChatVisibility,
+    TOGGLE_SIDEBAR: toggleSidebar,
+    TOGGLE_INFO: toggleInfo,
+    TOGGLE_SEARCH: toggleSearch,
+  }
 };
 
 const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean }, event: KeyboardEvent) => {
+  const OS = os();
+
+  const keyCombinations = hotKeyConfiguration[OS];
+  const run = hotKeyConfiguration.run;
+
   Object
-    .keys(hotKeyConfiguration)
+    .keys(keyCombinations)
     .forEach((action) => {
-      if (checkCombo(hotKeyConfiguration[action].keyCombo, keyValues)) {
+      if (checkCombo(keyCombinations[action], keyValues)) {
         event.preventDefault();
-        hotKeyConfiguration[action].run();
+        run[action]();
       }
     })
 }
