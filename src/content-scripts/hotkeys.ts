@@ -164,6 +164,12 @@ const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean;
 
 
 export const handleHotKeys = (event: KeyboardEvent) => {
+  if (!event.getModifierState('Control') && !event.getModifierState('Meta')) {
+    // If a modifier is not selected, we can short-circuit this.
+    log('No Modifier selected. Early return.');
+    return;
+  }
+
   // To override chrome hotkeys
   const { metaKey, ctrlKey, key, shiftKey } = event;
 
