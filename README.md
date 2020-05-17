@@ -5,6 +5,12 @@
 
 <img width="1400" alt="GithubBanner" src="https://user-images.githubusercontent.com/6417910/82126610-6d87e800-97cb-11ea-8201-50ced4a2de0b.png">
 
+<hr />
+
+<a href="https://chrome.google.com/webstore/detail/refined-whatsapp/alkoadailhkkeiaadmlkbhbegegjhiok" title="refined whatsapp on Chrome Web Store">
+<img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" />
+</a>
+
 ## Keyboard Shortcuts
 
 | Action | Hotkey |
