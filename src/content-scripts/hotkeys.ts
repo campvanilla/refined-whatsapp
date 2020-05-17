@@ -70,73 +70,103 @@ const toggleSearch = () => {
   searchBtn.dispatchEvent(new Event('mousedown', { bubbles: true }));
 }
 
+const Labels = {
+  MetaMacOS: '⌘ Command',
+  CtrlMacOS: '⌃ Control',
+  Ctrl: 'Ctrl',
+};
+
 const hotKeyConfiguration = {
   MacOS: {
     OPEN_NEW_CHAT: {
       key: 'k',
       metaKey: true,
+      label: `${Labels.MetaMacOS} + K`
     },
     TOGGLE_VISIBILITY: {
       key: 'l',
       metaKey: true,
+      label: `${Labels.MetaMacOS} + L`
     },
     TOGGLE_SIDEBAR: {
       key: '\\',
       metaKey: true,
+      label: `${Labels.MetaMacOS} + \\`
     },
     TOGGLE_INFO: {
       key: 'i',
       metaKey: true,
+      label: `${Labels.MetaMacOS} + I`
     },
     TOGGLE_SEARCH: {
       key: ' ',
       ctrlKey: true,
+      label: `${Labels.CtrlMacOS} + Space`
     },
   },
   Windows: {
     OPEN_NEW_CHAT: {
       key: 'k',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + K`,
     },
     TOGGLE_VISIBILITY: {
       key: 'l',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + L`,
     },
     TOGGLE_SIDEBAR: {
       key: '\\',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + \\`,
     },
     TOGGLE_INFO: {
       key: 'i',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + I`,
     },
     TOGGLE_SEARCH: {
       key: ' ',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + Space`,
     },
   },
   Linux: {
     OPEN_NEW_CHAT: {
       key: 'k',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + K`,
     },
     TOGGLE_VISIBILITY: {
       key: 'l',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + L`,
     },
     TOGGLE_SIDEBAR: {
       key: '\\',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + \\`,
     },
     TOGGLE_INFO: {
       key: 'i',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + I`,
     },
     TOGGLE_SEARCH: {
       key: ' ',
       ctrlKey: true,
+      label: `${Labels.Ctrl} + Space`,
     },
   },
+};
+
+export const getHotkeyConfigurationForCurrentOS = () => {
+  const OS = os();
+  return hotKeyConfiguration[OS];
+};
+
+const keyCombinations = {
+  ...getHotkeyConfigurationForCurrentOS(),
   run: {
     OPEN_NEW_CHAT: openNewChat,
     TOGGLE_VISIBILITY: toggleCurrentChatVisibility,
@@ -147,10 +177,7 @@ const hotKeyConfiguration = {
 };
 
 const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean }, event: KeyboardEvent) => {
-  const OS = os();
-
-  const keyCombinations = hotKeyConfiguration[OS];
-  const run = hotKeyConfiguration.run;
+  const run = keyCombinations.run;
 
   Object
     .keys(keyCombinations)
@@ -161,7 +188,6 @@ const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean;
       }
     })
 }
-
 
 export const handleHotKeys = (event: KeyboardEvent) => {
   if (!event.getModifierState('Control') && !event.getModifierState('Meta')) {
