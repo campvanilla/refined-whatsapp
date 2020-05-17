@@ -27,6 +27,7 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --outgoing-background-deeper-rgb: 67, 67, 67;
   --dropdown-background: rgb(36, 36, 36);
   --panel-background-deep: #434343;
+  --panel-background-deeper: #151515;
   --drawer-gallery-background: #242424;
   --compose-background: #434343;
   --message-selection-highlight: rgba(0,0,0, 0.2);
