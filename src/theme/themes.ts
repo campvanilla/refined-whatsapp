@@ -56,6 +56,7 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --secondary: #ddd;
   --secondary-stronger:: #ddd;
   --secondary-lighter: #ddd;
+  --secondary-light: #158ccc;
   --icon-lighter: #ddd;
   --icon-lighter-rgb: #ddd;
   --icon-strong-rgb: #fff;
@@ -64,6 +65,8 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --system-message-text: #fff;
   --dropdown-background-hover: #434343;
   --primary-title: #eee;
+  --unread-background: #2e2e2e;
+  --unread-bar-background: #434343;
 }
 body {
     color: #d1d8dd;
