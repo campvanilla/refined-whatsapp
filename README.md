@@ -5,8 +5,21 @@
 
 <img width="1400" alt="GithubBanner" src="https://user-images.githubusercontent.com/6417910/82126610-6d87e800-97cb-11ea-8201-50ced4a2de0b.png">
 
+## Keyboard Shortcuts
 
-## setup
+| Action | Hotkey |
+|---|---|
+| Start a new chat / Quick search | `⌘ Command + K` or `Ctrl + K` |
+| Show/hide current chats | `⌘ Command + L` or `Ctrl + L` |
+| Show/hide chat sidebar | `⌘ Command + \` or `Ctrl + \` |
+| Show/hide chat info | `⌘ Command + I` or `Ctrl + I` |
+| Search messages in chat | `⌃ Ctrl + Space` |
+
+## Dark Mode
+
+![dark-mode](https://user-images.githubusercontent.com/6426069/82143287-59da9100-9860-11ea-92bc-5a0674c3e920.jpg)
+
+## local setup
 
 If you'd like to try this extension out before a stable release:-
 
