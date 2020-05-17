@@ -68,6 +68,8 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --primary-title: #eee;
   --unread-background: #2e2e2e;
   --unread-bar-background: #434343;
+  --media-viewer-background: #151515;
+  --icon-strong: #adadad;
 }
 body {
     color: #d1d8dd;
