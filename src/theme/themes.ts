@@ -36,7 +36,7 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --button-primary-background: #434343;
   --button-primary-background-hover: #434343;
   --button-primary: #cbd4d9;
-  --button-secondary: #434343;
+  --button-secondary: #cbd4d9;
   --button-secondary-hover: #cbd4d9;
   --button-secondary-background-hover: #434343;
   --rich-text-panel-background: rgb(36, 36, 36);
