@@ -9,7 +9,6 @@ export default {
     compact: true,
     format: 'cjs',
   },
-  external: [ 'axios' ],
   plugins: [
     babel({
       exclude: 'node_modules/**',
