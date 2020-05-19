@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noEmitHelpers": false,
+    "module": "esnext",
+    "target": "esnext",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "declaration": false,
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+    "types": ["chrome"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}

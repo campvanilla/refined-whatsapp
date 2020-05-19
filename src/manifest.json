@@ -1,0 +1,23 @@
+{
+  "name": "refined whatsapp",
+  "version": "1.1.0",
+  "manifest_version": 2,
+  "description": "Supercharge Whatsapp™ Web with hotkeys and dark theme! 🚀",
+  "homepage_url": "https://github.com/campvanilla/refined-whatsapp",
+  "icons": {
+    "128": "icons/128x128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [ "https://web.whatsapp.com/*" ],
+      "js": [ "content-scripts/index.ts" ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "options/popup.html"
+  }
+}
