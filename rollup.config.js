@@ -31,13 +31,11 @@ export default {
     }),
     babel({
       babelHelpers: 'bundled',
-      presets: ['@babel/preset-env', 
-      // {
-      //   targets: 'Chrome > 65, not dead',
-      //   useBuiltIns: 'usage',
-      //   corejs: 3,
-      // }
-    ]
+      presets: ['@babel/preset-env', {
+        targets: 'Chrome > 65, not dead',
+        useBuiltIns: 'usage',
+        corejs: 3,
+      }]
     }),
     commonjs(),
     replace({
