@@ -20,5 +20,6 @@ awk '{sub(/\<script src=\"renderer\.js\"\>\<\/script\>/,"\<script src=\"renderer
 
 cd ..
 asar pack extracted app.asar
+rm -rf extracted
 open /Applications/WhatsApp.app
 cd ${cwd}
