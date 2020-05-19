@@ -19,8 +19,7 @@
       "contributions": [
         "code",
         "doc",
-        "ideas",
-        "bug"
+        "ideas"
       ]
     },
     {
@@ -32,7 +31,15 @@
         "code",
         "doc",
         "ideas",
-        "video",
+        "video"
+      ]
+    },
+    {
+      "login": "Siddharth11",
+      "name": "Siddharth Parmar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5427715?v=4",
+      "profile": "http://siddharthparmar.in",
+      "contributions": [
         "bug"
       ]
     }
