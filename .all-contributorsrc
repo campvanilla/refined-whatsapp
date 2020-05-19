@@ -1,0 +1,48 @@
+{
+  "projectName": "refined-whatsapp",
+  "projectOwner": "campvanilla",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributorsSortAlphabetically": false,
+  "contributors": [
+    {
+      "login": "rheaditi",
+      "name": "Aditi Mohanty",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6426069?v=4",
+      "profile": "https://aditimohanty.com/?utm_source=github&utm_medium=documentation-allcontributors&utm_content=refined-whatsapp",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "abinavseelan",
+      "name": "Abinav Seelan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6417910?v=4",
+      "profile": "https://abinavseelan.com/?utm_source=github&utm_medium=documentation-allcontributors&utm_content=refined-whatsapp",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "video"
+      ]
+    },
+    {
+      "login": "Siddharth11",
+      "name": "Siddharth Parmar",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5427715?v=4",
+      "profile": "http://siddharthparmar.in",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
