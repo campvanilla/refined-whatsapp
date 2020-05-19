@@ -2,18 +2,19 @@
 
 > Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-
 <img width="1400" alt="GithubBanner" src="https://user-images.githubusercontent.com/6417910/82126610-6d87e800-97cb-11ea-8201-50ced4a2de0b.png">
 
 <hr />
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <a href="https://chrome.google.com/webstore/detail/refined-whatsapp/alkoadailhkkeiaadmlkbhbegegjhiok" title="refined whatsapp on Chrome Web Store">
 <img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" />
 </a>
+
+<hr />
 
 ## Keyboard Shortcuts
 
