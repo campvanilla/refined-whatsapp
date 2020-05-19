@@ -3,7 +3,7 @@
 > Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -62,6 +62,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://aditimohanty.com"><img src="https://avatars3.githubusercontent.com/u/6426069?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Mohanty</b></sub></a><br /><a href="https://github.com/campvanilla/refined-whatsapp/commits?author=rheaditi" title="Code">💻</a> <a href="https://github.com/campvanilla/refined-whatsapp/commits?author=rheaditi" title="Documentation">📖</a> <a href="#ideas-rheaditi" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://abinavseelan.com"><img src="https://avatars2.githubusercontent.com/u/6417910?v=4" width="100px;" alt=""/><br /><sub><b>Abinav Seelan</b></sub></a><br /><a href="https://github.com/campvanilla/refined-whatsapp/commits?author=abinavseelan" title="Code">💻</a> <a href="https://github.com/campvanilla/refined-whatsapp/commits?author=abinavseelan" title="Documentation">📖</a> <a href="#ideas-abinavseelan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#video-abinavseelan" title="Videos">📹</a> <a href="https://github.com/campvanilla/refined-whatsapp/issues?q=author%3Aabinavseelan" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
