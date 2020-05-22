@@ -53,7 +53,6 @@ $ npm install && npm run build
 
 If you want to edit the extension yourself, we use `rollup-plugin-chrome-extension` with `simpleReloader` so after you load the unpacked extension (after running `npm start`) it will automatically reload the extension on every change. 🙃
 
-<<<<<<< HEAD
 
 
 # For all the above features in Whatsapp MacOS App
@@ -78,7 +77,6 @@ $ sh mac.sh
 ```
 
 That's it. Enjoy.
-=======
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -99,4 +97,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
->>>>>>> 5a4e38e617cf47ae06e2724618f416677c957c24
