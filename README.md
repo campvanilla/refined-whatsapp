@@ -2,14 +2,19 @@
 
 > Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀
 
-
 <img width="1400" alt="GithubBanner" src="https://user-images.githubusercontent.com/6417910/82126610-6d87e800-97cb-11ea-8201-50ced4a2de0b.png">
 
 <hr />
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 <a href="https://chrome.google.com/webstore/detail/refined-whatsapp/alkoadailhkkeiaadmlkbhbegegjhiok" title="refined whatsapp on Chrome Web Store">
 <img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" />
 </a>
+
+<hr />
 
 ## Keyboard Shortcuts
 
@@ -48,6 +53,7 @@ $ npm install && npm run build
 
 If you want to edit the extension yourself, we use `rollup-plugin-chrome-extension` with `simpleReloader` so after you load the unpacked extension (after running `npm start`) it will automatically reload the extension on every change. 🙃
 
+<<<<<<< HEAD
 
 
 # For all the above features in Whatsapp MacOS App
@@ -72,3 +78,25 @@ $ sh mac.sh
 ```
 
 That's it. Enjoy.
+=======
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://aditimohanty.com/?utm_source=github&utm_medium=documentation-allcontributors&utm_content=refined-whatsapp"><img src="https://avatars3.githubusercontent.com/u/6426069?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Mohanty</b></sub></a><br /><a href="https://github.com/campvanilla/refined-whatsapp/commits?author=rheaditi" title="Code">💻</a> <a href="https://github.com/campvanilla/refined-whatsapp/commits?author=rheaditi" title="Documentation">📖</a> <a href="#ideas-rheaditi" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://abinavseelan.com/?utm_source=github&utm_medium=documentation-allcontributors&utm_content=refined-whatsapp"><img src="https://avatars2.githubusercontent.com/u/6417910?v=4" width="100px;" alt=""/><br /><sub><b>Abinav Seelan</b></sub></a><br /><a href="https://github.com/campvanilla/refined-whatsapp/commits?author=abinavseelan" title="Code">💻</a> <a href="https://github.com/campvanilla/refined-whatsapp/commits?author=abinavseelan" title="Documentation">📖</a> <a href="#ideas-abinavseelan" title="Ideas, Planning, & Feedback">🤔</a> <a href="#video-abinavseelan" title="Videos">📹</a></td>
+    <td align="center"><a href="http://siddharthparmar.in"><img src="https://avatars3.githubusercontent.com/u/5427715?v=4" width="100px;" alt=""/><br /><sub><b>Siddharth Parmar</b></sub></a><br /><a href="https://github.com/campvanilla/refined-whatsapp/issues?q=author%3ASiddharth11" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+>>>>>>> 5a4e38e617cf47ae06e2724618f416677c957c24
