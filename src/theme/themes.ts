@@ -36,6 +36,9 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --button-primary-background: #434343;
   --button-primary-background-hover: #434343;
   --button-primary: #cbd4d9;
+  --bubble-meta-icon: #eee;
+  --chatlist-icon: #eee;
+  --bubble-meta: #eee;
   --button-secondary: #cbd4d9;
   --button-secondary-hover: #cbd4d9;
   --button-secondary-background-hover: #434343;
@@ -49,6 +52,7 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --intro-background: #151515;
   --background-default: rgb(36, 36, 36);
   --panel-background-lighter: rgb(36, 36, 36);
+  --panel-header-background: rgb(36, 36, 36);
   --panel-background: rgb(36, 36, 36);
   --background-default-hover: #434343;
   --primary-strong: #eee;
