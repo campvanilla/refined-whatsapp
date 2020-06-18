@@ -7,7 +7,9 @@ export const ThemeStyles = new Map<ThemeType, string>([
   [ThemeType.WhatsappWeb, ''],
 ]);
 
-ThemeStyles.set(ThemeType.RefinedDark, `
+ThemeStyles.set(
+  ThemeType.RefinedDark,
+  `
 :root {
   --app-background-stripe: #151515;
   --primary: #eee;
@@ -74,6 +76,11 @@ ThemeStyles.set(ThemeType.RefinedDark, `
   --unread-bar-background: #434343;
   --media-viewer-background: #151515;
   --icon-strong: #adadad;
+  --intro-secondary: #ddd;
+  --message-primary: #fff;
+  --search-input-background:  rgb(36, 36, 36);
+  --compose-border: #434343;
+  --compose-primary: #eee;
 }
 body {
     color: #d1d8dd;
@@ -90,4 +97,5 @@ body {
 #startup, #initial_startup {
   background-color: rgb(36, 36, 36);
 }
-`.trim());
+`.trim()
+);
