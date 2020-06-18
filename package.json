@@ -6,6 +6,7 @@
     "lint": "eslint --ext .ts,.tsx ./",
     "start": "rollup -c rollup.config.js -w",
     "prebuild": "rm -rf dist",
+    "ultra": "npm run build && NODE_ENV=production rollup -c ultra-rollup.config.js",
     "build": "NODE_ENV=production rollup -c rollup.config.js",
     "build:zip": "npm run build && zip -r refined-whatsapp.zip dist"
   },
@@ -47,6 +48,7 @@
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "rollup": "^2.10.0",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-chrome-extension": "^2.2.0",
     "rollup-plugin-terser": "^5.3.0",
     "typescript": "^3.9.2"

@@ -53,6 +53,30 @@ $ npm install && npm run build
 
 If you want to edit the extension yourself, we use `rollup-plugin-chrome-extension` with `simpleReloader` so after you load the unpacked extension (after running `npm start`) it will automatically reload the extension on every change. 🙃
 
+
+
+# For all the above features in Whatsapp MacOS App
+
+> You need NodeJS and NPM. (Bare Minimum);
+
+
+> You also need to make sure the Whatsapp app is not running.
+> After the process is complete the App will start automatically.
+
+```sh
+# clone the repo
+$ git clone git@github.com:campvanilla/refined-whatsapp.git
+$ cd refined-whatsapp
+
+# install && build
+$ npm install && npm run ultra
+
+# take note of the output directory, it'll be /path/to/refined-whatsapp/dist
+
+$ sh mac.sh
+```
+
+That's it. Enjoy.
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
