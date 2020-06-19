@@ -34,13 +34,13 @@ const showHotkeys = () => {
 const showVersion = () => {
   const { version } = chrome.runtime.getManifest();
 
-  const versionContiainer: HTMLElement | null  = document.querySelector('small[data-version]');
+  const versionContainer: HTMLElement | null  = document.querySelector('small[data-version]');
 
-  if (!versionContiainer) {
+  if (!versionContainer) {
     return;
   }
 
-  versionContiainer.innerText = `v${version}`;
+  versionContainer.innerText = `v${version}`;
 }
 
 showHotkeys();
