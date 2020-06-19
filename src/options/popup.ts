@@ -31,4 +31,17 @@ const showHotkeys = () => {
   }
 };
 
+const showVersion = () => {
+  const { version } = chrome.runtime.getManifest();
+
+  const versionContiainer: HTMLElement | null  = document.querySelector('small[data-version]');
+
+  if (!versionContiainer) {
+    return;
+  }
+
+  versionContiainer.innerText = `v${version}`;
+}
+
 showHotkeys();
+showVersion();
