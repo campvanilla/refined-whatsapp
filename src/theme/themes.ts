@@ -61,7 +61,7 @@ ThemeStyles.set(
   --primary-strong-rgb: 209, 216, 221;
   --primary-stronger: #fff;
   --secondary: #ddd;
-  --secondary-stronger:: #ddd;
+  --secondary-stronger: #ddd;
   --secondary-lighter: #ddd;
   --secondary-light: #158ccc;
   --icon-lighter: #ddd;
