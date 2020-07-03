@@ -85,6 +85,7 @@ ThemeStyles.set(
   --compose-input-background: #434343;
   --compose-input-border: #434343;
   --compose-panel-background-hover: #151515;
+  --panel-input-background: #434343;
 }
 body {
     color: #d1d8dd;
