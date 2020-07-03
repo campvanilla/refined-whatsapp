@@ -84,6 +84,7 @@ ThemeStyles.set(
   --search-container-background: rgb(36, 36, 36);
   --compose-input-background: #434343;
   --compose-input-border: #434343;
+  --compose-panel-background-hover: #151515;
 }
 body {
     color: #d1d8dd;
