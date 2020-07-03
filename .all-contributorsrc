@@ -40,9 +40,11 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/5427715?v=4",
       "profile": "http://siddharthparmar.in",
       "contributions": [
-        "bug"
+        "bug",
+        "code"
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
