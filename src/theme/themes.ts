@@ -61,7 +61,7 @@ ThemeStyles.set(
   --primary-strong-rgb: 209, 216, 221;
   --primary-stronger: #fff;
   --secondary: #ddd;
-  --secondary-stronger:: #ddd;
+  --secondary-stronger: #ddd;
   --secondary-lighter: #ddd;
   --secondary-light: #158ccc;
   --icon-lighter: #ddd;
@@ -85,6 +85,7 @@ ThemeStyles.set(
   --compose-input-background: #434343;
   --compose-input-border: #434343;
   --compose-panel-background-hover: #151515;
+  --panel-input-background: #434343;
 }
 body {
     color: #d1d8dd;
