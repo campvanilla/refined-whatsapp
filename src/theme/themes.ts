@@ -36,7 +36,9 @@ ThemeStyles.set(
   --modal-backdrop: rgba(0,0,0, 0.6);
   --modal-background: rgb(36, 36, 36);
   --button-primary-background: #434343;
+  --button-plain-background: #434343;
   --button-primary-background-hover: #434343;
+  --button-plain-background-hover: #434343;
   --button-primary: #cbd4d9;
   --bubble-meta-icon: #eee;
   --chatlist-icon: #eee;
