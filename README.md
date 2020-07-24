@@ -7,6 +7,7 @@
 <hr />
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![Release](https://img.shields.io/github/v/release/campvanilla/refined-whatsapp?include_prereleases&style=flat-square)](https://github.com/campvanilla/refined-whatsapp/releases)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
