@@ -32,6 +32,7 @@ ThemeStyles.set(
   --panel-background-deeper: #151515;
   --drawer-gallery-background: #242424;
   --compose-background: #434343;
+  --picker-background: rgb(36, 36, 36);
   --message-selection-highlight: rgba(0,0,0, 0.2);
   --modal-backdrop: rgba(0,0,0, 0.6);
   --modal-background: rgb(36, 36, 36);
