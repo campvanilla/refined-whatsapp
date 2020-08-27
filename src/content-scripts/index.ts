@@ -25,3 +25,6 @@ const poller = setInterval(() => {
     controlList.children[0].appendChild(themeBtn);
   }
 }, 500);
+
+// override default dark mode with extension's
+document.body.classList.remove('dark');
