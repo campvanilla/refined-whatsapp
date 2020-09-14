@@ -78,6 +78,7 @@ ThemeStyles.set(
   --unread-background: #2e2e2e;
   --unread-bar-background: #434343;
   --media-viewer-background: #151515;
+  --media-viewer-background-rgb: 36, 36, 36;
   --icon-strong: #adadad;
   --intro-secondary: #ddd;
   --message-primary: #fff;
