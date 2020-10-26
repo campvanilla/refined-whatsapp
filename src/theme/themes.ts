@@ -51,6 +51,7 @@ ThemeStyles.set(
   --background-default-active: #151515;
   --drawer-background-rgb: 16, 29, 37;
   --drawer-section-background-rgb: 16, 29, 37;
+  --drawer-gallery-background-hover: #434343;
   --conversation-panel-background: #151515;
   --intro-background: #151515;
   --background-default: rgb(36, 36, 36);
