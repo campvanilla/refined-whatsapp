@@ -66,10 +66,9 @@ const toggleInfo = () => {
 const toggleSearch = () => {
   log('toggleSearch');
 
-  const searchBtn = document.querySelector('div[title="Search…"]') as HTMLDivElement;
-
-  searchBtn.dispatchEvent(new Event('mousedown', { bubbles: true }));
-}
+  const searchBtn = getSearchButton();
+  searchBtn.click();
+};
 
 const Labels = {
   MetaMacOS: '⌘ Command',
