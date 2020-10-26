@@ -1,18 +1,19 @@
+import { getCloseNewChatSidebarButton, getNewChatButton, getSearchButton } from './selectors';
 import { log, checkCombo } from './utils';
 
 import { os } from './utils';
 
 const openNewChat = () => {
-  log("openNewChat");
+  log('openNewChat');
 
-  const newChatButton = document.querySelector('div[title="New chat"]') as HTMLDivElement;
-  const closeBtn = document.querySelector('span[data-icon="back-light"]') as HTMLSpanElement;
+  const closeBtn = getCloseNewChatSidebarButton();
+  const newChatButton = getNewChatButton();
 
   if (closeBtn) {
     closeBtn.click();
     log('openNewChat -> close');
   } else if (newChatButton) {
-    newChatButton.dispatchEvent(new Event('mousedown', { bubbles: true }));
+    newChatButton.click();
     log('openNewChat -> open');
   }
 };
@@ -60,15 +61,14 @@ const toggleInfo = () => {
     header.click();
     log('toggleInfo -> open');
   }
-}
+};
 
 const toggleSearch = () => {
   log('toggleSearch');
 
-  const searchBtn = document.querySelector('div[title="Search…"]') as HTMLDivElement;
-
-  searchBtn.dispatchEvent(new Event('mousedown', { bubbles: true }));
-}
+  const searchBtn = getSearchButton();
+  searchBtn.click();
+};
 
 const Labels = {
   MetaMacOS: '⌘ Command',
@@ -81,27 +81,27 @@ const hotKeyConfiguration = {
     OPEN_NEW_CHAT: {
       key: 'k',
       metaKey: true,
-      label: `${Labels.MetaMacOS} + K`
+      label: `${Labels.MetaMacOS} + K`,
     },
     TOGGLE_VISIBILITY: {
       key: 'l',
       metaKey: true,
-      label: `${Labels.MetaMacOS} + L`
+      label: `${Labels.MetaMacOS} + L`,
     },
     TOGGLE_SIDEBAR: {
       key: '\\',
       metaKey: true,
-      label: `${Labels.MetaMacOS} + \\`
+      label: `${Labels.MetaMacOS} + \\`,
     },
     TOGGLE_INFO: {
       key: 'i',
       metaKey: true,
-      label: `${Labels.MetaMacOS} + I`
+      label: `${Labels.MetaMacOS} + I`,
     },
     TOGGLE_SEARCH: {
       key: ' ',
       ctrlKey: true,
-      label: `${Labels.CtrlMacOS} + Space`
+      label: `${Labels.CtrlMacOS} + Space`,
     },
   },
   Windows: {
@@ -173,21 +173,22 @@ const keyCombinations = {
     TOGGLE_SIDEBAR: toggleSidebar,
     TOGGLE_INFO: toggleInfo,
     TOGGLE_SEARCH: toggleSearch,
-  }
+  },
 };
 
-const runHotKey = (keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean }, event: KeyboardEvent) => {
+const runHotKey = (
+  keyValues: { key: string; metaKey: boolean; ctrlKey: boolean; shiftKey: boolean },
+  event: KeyboardEvent
+) => {
   const run = keyCombinations.run;
 
-  Object
-    .keys(keyCombinations)
-    .forEach((action) => {
-      if (checkCombo(keyCombinations[action], keyValues)) {
-        event.preventDefault();
-        run[action]();
-      }
-    })
-}
+  Object.keys(keyCombinations).forEach((action) => {
+    if (checkCombo(keyCombinations[action], keyValues)) {
+      event.preventDefault();
+      run[action]();
+    }
+  });
+};
 
 export const handleHotKeys = (event: KeyboardEvent) => {
   if (!event.getModifierState('Control') && !event.getModifierState('Meta')) {
@@ -201,10 +202,13 @@ export const handleHotKeys = (event: KeyboardEvent) => {
 
   log({ metaKey, key, ctrlKey });
 
-  runHotKey({
-    key,
-    metaKey,
-    ctrlKey,
-    shiftKey,
-  }, event);
+  runHotKey(
+    {
+      key,
+      metaKey,
+      ctrlKey,
+      shiftKey,
+    },
+    event
+  );
 };

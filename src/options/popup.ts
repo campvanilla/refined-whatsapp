@@ -18,6 +18,7 @@ const showHotkeys = () => {
     const content = Object.entries(config)
       .map(([actionName, actionConfig]) => {
         const name = ACTION_LABEL[actionName];
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const label = ((actionConfig as unknown) as any).label as string; // TODO: @abinavseelan will get back to this :P
         return `
         <tr>
@@ -34,14 +35,14 @@ const showHotkeys = () => {
 const showVersion = () => {
   const { version } = chrome.runtime.getManifest();
 
-  const versionContainer: HTMLElement | null  = document.querySelector('small[data-version]');
+  const versionContainer: HTMLElement | null = document.querySelector('small[data-version]');
 
   if (!versionContainer) {
     return;
   }
 
   versionContainer.innerText = `v${version}`;
-}
+};
 
 showHotkeys();
 showVersion();

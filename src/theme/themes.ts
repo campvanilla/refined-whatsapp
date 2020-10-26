@@ -3,9 +3,7 @@ export enum ThemeType {
   'RefinedDark' = 'RefinedDark',
 }
 
-export const ThemeStyles = new Map<ThemeType, string>([
-  [ThemeType.WhatsappWeb, ''],
-]);
+export const ThemeStyles = new Map<ThemeType, string>([[ThemeType.WhatsappWeb, '']]);
 
 ThemeStyles.set(
   ThemeType.RefinedDark,
