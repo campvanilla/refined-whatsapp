@@ -1,9 +1,10 @@
 import { createSwitcher } from './switcher';
-import { SIDEBAR_CONTROLS_ID } from '@src/selectors';
+
+import { getSidebarControls } from '@src/content-scripts/selectors';
 
 export const setupThemes = () => {
   const poller = setInterval(() => {
-    const sidebarControls = document.getElementById(SIDEBAR_CONTROLS_ID) as HTMLDivElement;
+    const sidebarControls = getSidebarControls();
 
     if (sidebarControls) {
       clearInterval(poller);
