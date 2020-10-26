@@ -24,12 +24,12 @@ const createThemeControls = async () => {
 
   const setTheme = (theme: ThemeType) => {
     if (currentTheme === theme) {
+      currentThemeIndex = ThemesList.indexOf(currentTheme);
       log('🎨 :no change');
       return;
     }
 
-    log(`🎨 : ${currentTheme || 'none'} → ${theme}`);
-    currentThemeIndex = ThemesList.indexOf(currentTheme);
+    log(`🎨 : changed "${currentTheme || 'none'}" → "${theme}"`);
     appendStyleContainerIfMissing();
 
     // override theme if required
@@ -45,6 +45,7 @@ const createThemeControls = async () => {
     }
     // finally set theme
     currentTheme = theme;
+    currentThemeIndex = ThemesList.indexOf(currentTheme);
     setPreferredTheme(theme);
   };
 
