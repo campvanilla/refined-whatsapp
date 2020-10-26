@@ -1,9 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const log = (...args: any[]) => {
   if (__DEBUG__) {
-    console.log("[DEBUG] ", ...args);
+    console.log('[DEBUG] ', ...args);
   }
-}
+};
 
 export const checkCombo = (keyCombo, modifiers) => {
   const checkList = ['key', 'ctrlKey', 'metaKey', 'shiftKey'];
@@ -16,7 +16,7 @@ export const checkCombo = (keyCombo, modifiers) => {
   }
 
   return true;
-}
+};
 
 const getOS = () => {
   const platform = window.navigator.platform;
@@ -35,6 +35,6 @@ const getOS = () => {
   return () => {
     return os;
   };
-}
+};
 
 export const os = getOS();

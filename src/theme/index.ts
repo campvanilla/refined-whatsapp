@@ -1,6 +1,5 @@
-
 import { log } from '../content-scripts/utils';
-import { ThemeType, ThemeStyles } from './themes'
+import { ThemeType, ThemeStyles } from './themes';
 import { getPreferredTheme, setPreferredTheme } from '@src/storage';
 
 const internalStyleOverride = document.createElement('style');
