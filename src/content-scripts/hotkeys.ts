@@ -1,3 +1,4 @@
+import { getCloseNewChatSidebarButton, getNewChatButton } from './selectors';
 import { log, checkCombo } from './utils';
 
 import { os } from './utils';
@@ -5,14 +6,14 @@ import { os } from './utils';
 const openNewChat = () => {
   log("openNewChat");
 
-  const newChatButton = document.querySelector('div[title="New chat"]') as HTMLDivElement;
-  const closeBtn = document.querySelector('span[data-icon="back-light"]') as HTMLSpanElement;
+  const closeBtn = getCloseNewChatSidebarButton();
+  const newChatButton = getNewChatButton();
 
   if (closeBtn) {
     closeBtn.click();
     log('openNewChat -> close');
   } else if (newChatButton) {
-    newChatButton.dispatchEvent(new Event('mousedown', { bubbles: true }));
+    newChatButton.click();
     log('openNewChat -> open');
   }
 };
