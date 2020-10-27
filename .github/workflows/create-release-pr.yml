@@ -78,4 +78,4 @@ jobs:
     - name: Output
       run: |
         echo "Pull Request Number - ${{ steps.create-pull-request.outputs.pull-request-number }}"
-        echo "Pull Request URL - ${{ steps.create-pull-request.outputs.pull-request-url }}
+        echo "Pull Request URL - ${{ steps.create-pull-request.outputs.pull-request-url }}"
