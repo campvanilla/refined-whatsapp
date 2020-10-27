@@ -58,7 +58,7 @@ jobs:
         branch: "release/v${{ steps.bump-version.outputs.NEW_VERSION }}"
         delete-branch: true
         title: "🏁: v${{ steps.bump-version.outputs.NEW_VERSION }}"
-        reviewers: "rheaditi"
+        reviewers: "rheaditi,abinavseelan"
     - name: Output
       run: |
         echo "Pull Request Number - ${{ steps.create-pull-request.outputs.pull-request-number }}"
