@@ -1,6 +1,6 @@
 {
   "name": "refined-whatsapp",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Supercharge Whatsapp™ Web with hotkeys and a dark theme 🚀",
   "scripts": {
     "lint": "eslint --ext .ts,.tsx ./",
