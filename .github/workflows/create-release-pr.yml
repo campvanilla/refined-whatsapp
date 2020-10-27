@@ -21,6 +21,7 @@ jobs:
   bump-version:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    name: 'Bump npm & manifest versions'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,4 +31,35 @@ jobs:
         node-version: '12'
     # Runs a single command using the runners shell
     - name: 'bump npm version'
-      run: echo "Hello ${{ github.event.inputs.newVersion }}"
+      run: npm version --no-git-tag-version "${{ github.event.inputs.newVersion }}"
+    - name: 'bump manifest version'
+      id: 'bump-version'
+      shell: python
+      run: |
+        import json, os
+        with open('package.json') as read_package_file:
+          package = json.load(read_package_file)
+        with open('src/manifest.json') as read_manifest_file:
+          manifest = json.load(read_manifest_file)
+        newVersion = package['version']
+        manifest['version'] = newVersion
+        with open('src/manifest.json', 'w') as write_manifest_file:
+          json.dump(manifest, write_manifest_file)
+        
+        print("new version in package.json", newVersion)
+        os.system('echo "::set-output name=NEW_VERSION::{0}"'.format(newVersion))
+    - name: 'eslint/prettier'
+      run: npx eslint --fix src/manifest.json
+    - name: 'create pull request'
+      uses: peter-evans/create-pull-request@v3
+      id: create-pull-request
+      with:
+        commit-message: "🏁: v${{ steps.bump-version.outputs.NEW_VERSION }}"
+        branch: "release/v${{ steps.bump-version.outputs.NEW_VERSION }}"
+        delete-branch: true
+        title: "🏁: v${{ steps.bump-version.outputs.NEW_VERSION }}"
+        reviewers: "rheaditi"
+    - name: Output
+      run: |
+        echo "Pull Request Number - ${{ steps.create-pull-request.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.create-pull-request.outputs.pull-request-url }}
