@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const log = (...args: any[]) => {
   if (__DEBUG__) {
-    console.log('[DEBUG] ', ...args);
+    console.log('[DEBUG][refined-whatsapp] ', ...args);
   }
 };
 

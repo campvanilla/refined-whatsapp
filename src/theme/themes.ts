@@ -1,9 +1,15 @@
 export enum ThemeType {
-  'WhatsappWeb' = 'WhatsappWeb',
   'RefinedDark' = 'RefinedDark',
+  'WhatsappWebDark' = 'WhatsappWebDark',
+  'WhatsappWeb' = 'WhatsappWeb',
 }
 
-export const ThemeStyles = new Map<ThemeType, string>([[ThemeType.WhatsappWeb, '']]);
+export const ThemesList = [ThemeType.RefinedDark, ThemeType.WhatsappWeb, ThemeType.WhatsappWebDark];
+
+export const ThemeStyles = new Map<ThemeType, string>([
+  [ThemeType.WhatsappWeb, ''],
+  [ThemeType.WhatsappWebDark, ''],
+]);
 
 ThemeStyles.set(
   ThemeType.RefinedDark,

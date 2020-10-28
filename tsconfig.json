@@ -16,7 +16,8 @@
     "moduleResolution": "node",
     "declaration": false,
     "paths": {
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@selectors": ["src/selectors"]
     },
     "types": ["chrome"]
   },
