@@ -23,8 +23,7 @@ const poller = setInterval(() => {
     });
 
     controlList.children[0].appendChild(themeBtn);
+    // override default dark mode with extension's
+    document.body.classList.remove('dark');
   }
 }, 500);
-
-// override default dark mode with extension's
-document.body.classList.remove('dark');
