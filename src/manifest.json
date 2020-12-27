@@ -6,7 +6,7 @@
   "name": "refined whatsapp",
   "icons": { "128": "icons/128x128.png" },
   "homepage_url": "https://github.com/campvanilla/refined-whatsapp",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "manifest_version": 2,
   "permissions": ["storage"],
   "description": "Supercharge Whatsapp\u2122 Web with hotkeys and dark theme! \ud83d\ude80"
