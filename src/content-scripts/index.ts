@@ -7,6 +7,11 @@ const THEME_ICON = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox=
 document.addEventListener('keydown', handleHotKeys);
 setInitialTheme();
 
+function removeDefaultDarkTheme() {
+  // override default dark mode with extension's
+  document.body.classList.remove('dark');
+}
+
 const poller = setInterval(() => {
   const controlList = document.getElementById('side') as HTMLDivElement;
 
@@ -23,7 +28,8 @@ const poller = setInterval(() => {
     });
 
     controlList.children[0].appendChild(themeBtn);
-    // override default dark mode with extension's
-    document.body.classList.remove('dark');
+    removeDefaultDarkTheme();
   }
 }, 500);
+
+removeDefaultDarkTheme();
